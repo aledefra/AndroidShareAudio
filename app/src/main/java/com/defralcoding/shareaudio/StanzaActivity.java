@@ -1,19 +1,13 @@
 package com.defralcoding.shareaudio;
 
-import android.graphics.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class StanzaActivity extends AppCompatActivity {
 
     private Stanza stanza;
 
@@ -29,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //stanza.RiprendiCanzone();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_stanza);
     }
 
     public void AggiornaCanzone(Canzone canzone) {

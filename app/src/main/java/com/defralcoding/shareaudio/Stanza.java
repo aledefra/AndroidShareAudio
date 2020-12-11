@@ -1,9 +1,6 @@
 package com.defralcoding.shareaudio;
 
 
-import android.view.View;
-import android.widget.TextView;
-
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -11,7 +8,7 @@ import java.util.UUID;
 public abstract class Stanza {
 
     protected SocketConnettore socket;
-    protected MainActivity view;
+    protected StanzaActivity view;
 
     public int idStanza = 1;
     public String nomeStanza = "Casa";
@@ -23,7 +20,7 @@ public abstract class Stanza {
     protected boolean shouldPlay = false;
     protected UUID userPaused = null;
 
-    public Stanza(int idStanza, String nomeStanza, ArrayList<Utente> utentiStanza, MainActivity view) {
+    public Stanza(int idStanza, String nomeStanza, ArrayList<Utente> utentiStanza, StanzaActivity view) {
         this.idStanza = idStanza;
         this.nomeStanza = nomeStanza;
         this.utentiStanza = utentiStanza;

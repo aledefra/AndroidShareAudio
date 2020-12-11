@@ -1,7 +1,5 @@
 package com.defralcoding.shareaudio;
 
-import android.view.View;
-
 import java.util.ArrayList;
 
 public class StanzaSlave extends Stanza {
@@ -15,7 +13,7 @@ public class StanzaSlave extends Stanza {
     }
      */
 
-    public StanzaSlave(int idStanza, String nomeStanza, ArrayList<Utente> utentiStanza, MainActivity view) {
+    public StanzaSlave(int idStanza, String nomeStanza, ArrayList<Utente> utentiStanza, StanzaActivity view) {
         super(idStanza, nomeStanza, utentiStanza, view);
     }
 
