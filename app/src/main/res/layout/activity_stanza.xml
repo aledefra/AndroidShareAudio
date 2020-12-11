@@ -15,9 +15,9 @@
         android:backgroundTint="@android:color/black"
         android:scaleType="fitCenter"
         android:tint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNomeStanza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/txtNomeStanza"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -28,9 +28,9 @@
         android:backgroundTint="@android:color/black"
         android:scaleType="fitCenter"
         android:tint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNomeStanza"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/txtNomeStanza"
         app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
@@ -45,8 +45,8 @@
         android:onClick="Riproduci"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/btnSuccSong"
+        app:layout_constraintStart_toEndOf="@+id/btnPrevSong"
         app:srcCompat="@android:drawable/ic_media_play" />
 
     <TextView
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCopertina" />
 
     <TextView
         android:id="@+id/txtArtista"
@@ -105,8 +105,8 @@
         android:scaleType="fitCenter"
         android:tint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/btnSuccSong"
+        app:layout_constraintStart_toStartOf="@+id/btnSuccSong"
         app:layout_constraintTop_toTopOf="@+id/imageButton"
         app:srcCompat="@android:drawable/ic_input_add" />
 
@@ -118,13 +118,13 @@
         android:scaleType="fitCenter"
         android:tint="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="@+id/btnPrevSong"
+        app:layout_constraintStart_toStartOf="@+id/btnPrevSong"
         app:layout_constraintTop_toTopOf="@+id/imageButton"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgCopertina"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginStart="32dp"
@@ -132,11 +132,14 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeStanza"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_launcher_background"
+        android:background="@drawable/copertinacanzone"
+         />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnPrevSong"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -152,7 +155,7 @@
         app:srcCompat="@android:drawable/ic_media_previous" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnSuccSong"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -168,7 +171,7 @@
         app:srcCompat="@android:drawable/ic_media_next" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtNomeStanza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
