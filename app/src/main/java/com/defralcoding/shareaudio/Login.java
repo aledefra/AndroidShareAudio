@@ -14,7 +14,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 
 public class Login extends AppCompatActivity  {
 
-    private static final String TAG = "prova";
+    private static final String TAG = "GOOGLE LOG IN";
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 123;
 
@@ -65,7 +65,6 @@ public class Login extends AppCompatActivity  {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             // Signed in successfully, show authenticated UI.
-            Log.w("DIOCANE", String.valueOf(account.getEmail()));
             updateUI(account);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
@@ -75,9 +74,10 @@ public class Login extends AppCompatActivity  {
         }
     }
     public void updateUI(GoogleSignInAccount acc){
-
-        Intent intent = new Intent(this,StanzaActivity.class);
-        startActivity(intent);
+        if(acc!= null) {
+            Intent intent = new Intent(this, StanzaActivity.class);
+            startActivity(intent);
+        }
 
     }
 

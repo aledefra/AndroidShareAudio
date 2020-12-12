@@ -17,11 +17,11 @@ import java.net.*;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
+
 public class StanzaActivity extends AppCompatActivity {
 
     private Stanza stanza;
     ImageView imgCopertina;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class StanzaActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stanza);
-        imgCopertina = (ImageView) findViewById(R.id.imgCopertina);
+        imgCopertina = findViewById(R.id.imgCopertina);
         imgCopertina.setClipToOutline(true);
         ((TextView) findViewById(R.id.txtNomeStanza)).setText(stanza.nomeStanza);
 
@@ -50,6 +50,7 @@ public class StanzaActivity extends AppCompatActivity {
         DownloadImage downloadImage = new DownloadImage();
         try {
             Bitmap bitmap = downloadImage.execute(canzone.urlCopertina).get();
+
             imgCopertina.setImageBitmap(bitmap);
 
         } catch (ExecutionException e) {

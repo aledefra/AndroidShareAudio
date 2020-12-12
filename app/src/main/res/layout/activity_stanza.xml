@@ -5,7 +5,7 @@
     android:id="@+id/stanza_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#141414"
+    android:background="#2E2E2E"
     tools:context=".StanzaActivity">
 
     <ImageButton
@@ -130,13 +130,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNomeStanza"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/nomusic"
-        android:background="@drawable/copertinacanzone"
-         />
+        android:background="@drawable/copertinacanzone" />
 
     <ImageButton
         android:id="@+id/btnPrevSong"
