@@ -5,33 +5,32 @@
     android:id="@+id/stanza_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#141414"
     tools:context=".StanzaActivity">
 
     <ImageButton
         android:id="@+id/imageButton7"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="24dp"
-        android:backgroundTint="@android:color/black"
-        android:scaleType="fitCenter"
+        android:background="@drawable/roundedbuttonstanza"
         android:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/txtNomeStanza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtNomeStanza"
-        app:srcCompat="@android:drawable/arrow_up_float" />
+        app:srcCompat="@drawable/ic_chevronleft" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/btnReturn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="24dp"
-        android:backgroundTint="@android:color/black"
-        android:scaleType="fitCenter"
+        android:background="@drawable/roundedbuttonstanza"
         android:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/txtNomeStanza"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtNomeStanza"
-        app:srcCompat="@android:drawable/arrow_up_float" />
+        app:srcCompat="@drawable/ic_chevronleft" />
 
     <ImageButton
         android:id="@+id/btnRiproduci"
@@ -57,7 +56,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="sans-serif"
-        android:text="Titolo"
+        android:text="Non in riproduzione"
+        android:textColor="@android:color/darker_gray"
         android:textAlignment="viewStart"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -134,7 +134,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNomeStanza"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/ic_launcher_background"
+        app:srcCompat="@drawable/nomusic"
         android:background="@drawable/copertinacanzone"
          />
 
@@ -172,15 +172,18 @@
 
     <TextView
         android:id="@+id/txtNomeStanza"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="88dp"
         android:text="Nome Stanza"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/imageButton7"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnReturn"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,6 @@ public class StanzaActivity extends AppCompatActivity {
 
     private Stanza stanza;
     ImageView imgCopertina;
-    String url = "https://thumbs.dreamstime.com/z/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg";
 
 
     @Override
@@ -29,7 +28,7 @@ public class StanzaActivity extends AppCompatActivity {
 
         ArrayList<Utente> utenti = new ArrayList<Utente>();
         utenti.add(new Utente());
-        stanza = new StanzaSlave(1, "Casa", utenti, this);
+        stanza = new StanzaSlave(4, "Casa", utenti, this);
 
         stanza.Apri();
 
@@ -38,19 +37,10 @@ public class StanzaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stanza);
         imgCopertina = (ImageView) findViewById(R.id.imgCopertina);
-        ((TextView) findViewById(R.id.txtNomeStanza)).setText(stanza.nomeStanza);
-        DownloadImage downloadImage = new DownloadImage();
-        try {
-            Bitmap bitmap = downloadImage.execute(url).get();
-            imgCopertina.setImageBitmap(bitmap);
-
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         imgCopertina.setClipToOutline(true);
+        ((TextView) findViewById(R.id.txtNomeStanza)).setText(stanza.nomeStanza);
+
+
     }
 
 
